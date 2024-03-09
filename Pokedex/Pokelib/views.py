@@ -23,4 +23,4 @@ def index(request):
         print(data)
     else:
         data = {}
-    return render(request, 'main/index.html', 'Pokelib\models.py', data)
+    return render(request, 'main/index.html', data)
