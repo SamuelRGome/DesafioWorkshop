@@ -13,9 +13,6 @@
 </head>
 <body>
     <h2>Using Django Framework</h5> 
-    <!-- imagem principal -->
-    <img src="{% static 'img/pokedex-image.png' %}" class="image" style="width:100px;">
-    
     <form method="post">
         {% csrf_token %}
         
@@ -26,7 +23,7 @@
     <div>
         {% if numero and nome %}
             <h3>
-                Numero: {{number}}
+                Numero: {{numero}}
             </h3>
             <h3>
                 Nome: {{nome}}
