@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- necessario para carregar as imagens -->
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" crossorigin="anonymous"/>
+    <link rel="icon" href="{% static 'img/pokeball-icon.ico' %}">
+    <title>Pokedex | Django</title>
+</head>
+<body>
+    <h2>Using Django Framework</h5> 
+    <!-- imagem principal -->
+    <img src="{% static 'img/pokedex-image.png' %}" class="image" style="width:100px;">
+    
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- barra de pesquisa -->
+        <input type="text" name="pokemon" placeholder="Search Your Pokemon...">
+        <button type="submit">Search</button>
+    </form>
+    <div>
+        {% if number and name %}
+            <h3>
+                Numero: {{number}}
+            </h3>
+            <h3>
+                Nome: {{name}}
+            </h3>
+            <h3>
+                Altura: {{height}}
+            </h3>
+            <h3>
+                Peso: {{weight}}
+            </h3>
+            <h3>
+                Default sprite: 
+            </h3>
+            <img src="{{sprite}}" alt="{{name}} sprite" style="width:70px">
+        {% else %}
+        <div>
+            <h3>
+                Escreva o nome ou ID do seu pokemon: 
+            </h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
