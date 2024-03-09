@@ -20,22 +20,22 @@
         {% csrf_token %}
         
         <!-- barra de pesquisa -->
-        <input type="text" name="pokemon" placeholder="Search Your Pokemon...">
-        <button type="submit">Search</button>
+        <input type="text" name="pokemon" placeholder="Pesquise o Pokemon...">
+        <button type="submit">Pesquisar</button>
     </form>
     <div>
-        {% if number and name %}
+        {% if numero and nome %}
             <h3>
                 Numero: {{number}}
             </h3>
             <h3>
-                Nome: {{name}}
+                Nome: {{nome}}
             </h3>
             <h3>
-                Altura: {{height}}
+                Altura: {{altura}}
             </h3>
             <h3>
-                Peso: {{weight}}
+                Peso: {{peso}}
             </h3>
             <h3>
                 Default sprite: 

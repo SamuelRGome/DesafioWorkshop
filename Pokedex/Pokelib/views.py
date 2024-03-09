@@ -18,7 +18,7 @@ def index(request):
             "nome": str(list_of_data['name']).capitalize(),
             "altura": str(list_of_data['height']),
             "peso": str(list_of_data['weight']),
-            "img": str(list_of_data['sprites']['front_default']),
+            "sprite": str(list_of_data['sprites']['front_default']),
         }
 
         print(data)
